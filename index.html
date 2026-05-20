@@ -1,0 +1,1246 @@
+<html lang="en"><head><script>(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6ImE1MTMzNTUyZGIzZmQ1ZWM5NjdlZWFkNjk3ZjNhZTgwYjliNzk1ZjQiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIwODk4NjIxMjg0MTIyOTcxNzg2MCIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjXzhiYTgyMmUzZDU0NzBkOTlfaW5kZXguaHRtbC04MjcifSwiZXhwIjoxNzc5Mjk4MjAxLCJpYXQiOjE3NzkyOTQ2MDEsImFsZyI6IlJTMjU2In0.cADUPs5ByfyR_OJooEK4wtXrYY2fdqLpGikxhUyLhjlmlegfSpli0dx6z7W5c9RtOIwwwmx1mVX70i1u4RX7EJZnhGESSJqqRbxMQFGzSU4mEGRCpqU1xaAIKbV33RAiLTsS5OhiskHKqXZp3W98pZdNbNBaz3ALt3jufePJXi0S_GNmedszz2-834L-HB9dD4MrWF4kyUPX1f4H5qfMSUAh_4l2tMSJUG03vmu7luTniZ-Q6Vhr-FPpdT2-qC_ke5EEGC0j_dpzMu0i-hvN5i6oEY6Irfkz4BrvxNeE5yjwTLIu48QZPHhJoGz8WjIXjjSRIlLaH8QH2jlN5lOQ2g","c_8ba822e3d5470d99_index.html-827")</script><script>(function(){'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+function p(a,b){if(b)a:{var d=n;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&h(d,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
+p("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});p("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function u(a,b){var d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);var c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var v=(()=>{var a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){var b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let x=null;function y(a={}){return x?x:a.l?x=a.l:x=w(window.getComputedStyle(document.documentElement))}function z(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function A(a,b={}){var d;if(!(d=b.width)){d=z(a,"border-left-width");var c=z(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=z(a,"border-top-width"),c=z(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function B(a){return new Promise((b,d)=>{var c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function D(a,b,d){return t(function*(){var c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return C(c)})}
+var E=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||E(a,b)};function F(a,b){return y(b).map(d=>{var c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function G(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{b.className=`${b.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=F(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function H(a){return a.search(/^(data:)/)!==-1}function I(a,b,d){return t(function*(){var c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);var e=yield c.blob();return new Promise((f,g)=>{var k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(d({o:c,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const J={};function K(a,b,d){var c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function L(a,b,d){return t(function*(){var c=K(a,b,d.C);if(J[c]!=null)return J[c];d.u&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());try{let f=yield I(a,d.i,({o:g,result:k})=>{b||(b=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});var e=`data:${b};base64,${f}`}catch(f){e=d.B||""}return J[c]=e})};const M={P:"application/font-woff",R:"application/font-woff",N:"application/font-truetype",v:"application/vnd.ms-fontobject",H:"image/png",F:"image/jpeg",D:"image/jpeg",A:"image/gif",M:"image/tiff",L:"image/svg+xml",O:"image/webp"};function N(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function O(a){return t(function*(){var b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):B(b)})}function aa(a,b){return t(function*(){if(a.currentSrc){var d=document.createElement("canvas");let c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return B(d)}d=a.poster;d=yield L(d,M[N(d).toLowerCase()]||"",b);return B(d)})}
+function ba(a,b){return t(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield P(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ca(a,b){return t(function*(){return E(a,HTMLCanvasElement)?O(a):E(a,HTMLVideoElement)?aa(a,b):E(a,HTMLIFrameElement)?ba(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function da(a,b,d){return t(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;var c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||E(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>P(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function ea(a,b,d){var c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):y(d).forEach(f=>{var g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function fa(a,b){E(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function ha(a,b){return t(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){let g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield P(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function P(a,b,d){return t(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ca(c,b)).then(c=>da(a,c,b)).then(c=>{E(c,Element)&&(ea(a,c,b),G(a,c,":before",b),G(a,c,":after",b),E(a,HTMLTextAreaElement)&&(c.textContent=a.value),E(a,HTMLInputElement)&&c.setAttribute("value",a.value),fa(a,c));return c}).then(c=>ha(c,b)):null})};const Q=/url\((['"]?)([^'"]+?)\1\)/g,ia=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,ja=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function ka(a){var b=[];a.replace(Q,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!H(d))}
+function la(a,b,d,c){return t(function*(){try{let e=d?(new URL(b,d||void 0)).toString():b,f;f=yield L(e,M[N(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function ma(a,{I:b}){return b?a.replace(ja,d=>{for(;;){let [c,,e]=ia.exec(d)||[];if(!e)return"";if(e===b)return`src: ${c};`}}):a}
+function R(a,b,d){return t(function*(){if(a.search(Q)===-1)return a;var c=ma(a,d);return ka(c).reduce((e,f)=>e.then(g=>la(g,f,b,d)),Promise.resolve(c))})};function S(a,b,d){return t(function*(){var c,e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield R(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function na(a,b){return t(function*(){(yield S("background",a,b))||(yield S("background-image",a,b));(yield S("mask",a,b))||(yield S("-webkit-mask",a,b))||(yield S("mask-image",a,b))||(yield S("-webkit-mask-image",a,b))})}
+function oa(a,b){return t(function*(){var d=E(a,HTMLImageElement);if(d&&!H(a.src)||E(a,SVGImageElement)&&!H(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield L(c,M[N(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.m?(...k)=>{try{f(b.m(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function pa(a,b){return t(function*(){var d=w(a.childNodes).map(c=>T(c,b));yield Promise.all(d).then(()=>a)})}function T(a,b){return t(function*(){E(a,Element)&&(yield na(a,b),yield oa(a,b),yield pa(a,b))})};const U={};function V(a){return t(function*(){var b=U[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return U[a]=b})}function W(a,b){return t(function*(){var d=a.cssText,c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){var g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return I(g,b.i,({result:k})=>{d=d.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>d)})}
+function X(a){if(a==null)return[];var b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function qa(a,b){return t(function*(){var d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=V(f.href).then(m=>W(m,b)).then(m=>X(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Da){}})).catch(()=>{});c.push(f)}})}catch(f){let g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&c.push(V(e.href).then(k=>W(k,b)).then(k=>X(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function ra(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(Q)!==-1)}function sa(a,b){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=w(a.ownerDocument.styleSheets);d=yield qa(d,b);return ra(d)})}
+function ta(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}var d=new Set;b(a);return d}function ua(a,b){return t(function*(){var d=yield sa(a,b),c=ta(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>R(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function va(a,b){return t(function*(){var d=b.j!=null?b.j:b.K?null:yield ua(a,b);if(d){let c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function wa(a,b={}){return t(function*(){var {width:d,height:c}=A(a,b),e=yield P(a,b,!0);yield va(e,b);yield T(e,b);u(e,b);return yield D(e,d,c)})}
+function xa(a,b={}){return t(function*(){var {width:d,height:c}=A(a,b),e=yield wa(a,b);e=yield B(e);var f=document.createElement("canvas"),g=f.getContext("2d"),k=b.G||window.devicePixelRatio||1,m=b.h||d,q=b.g||c;f.width=m*k;f.height=q*k;!b.J&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384));
+f.style.width=`${m}`;f.style.height=`${q}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function ya(a,b={}){return t(function*(){return(yield xa(a,b)).toDataURL()})};const za=["gemini.google.com","corp.google.com","proxy.googlers.com"];function Y(){return document.body.querySelectorAll('[class*="animate"]').length>0}function Z(a){return t(function*(){try{return yield ya(a,{h:a.offsetWidth,g:a.offsetHeight})}catch(d){var b=a.offsetHeight;let c=document.createElement("canvas");c.width=a.offsetWidth;c.height=b;return c.toDataURL("image/png")}})}
+function Aa(){return t(function*(){var a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ba(a){return t(function*(){var b=document.body;if(Y()){var d=yield Aa();b=d;document.body.appendChild(d)}d=yield Z(b);Y()&&document.body.removeChild(b);window.parent.postMessage({type:"SEND_SCREENSHOT",image:d,topOffset:document.documentElement.scrollTop},a.origin)})}function Ca(a){return t(function*(){var b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}
+window.addEventListener("message",a=>t(function*(){if(za.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ba(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ca(a)))}}));
+})();</script><script>(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script>
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script ws-interception-config="{&quot;parentOrigin&quot;:&quot;https://gemini.google.com&quot;,&quot;proxiedDomains&quot;:[]}">(function(){'use strict';var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,d,e){if(b==Array.prototype||b==Object.prototype)return b;b[d]=e.value;return b};function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var d=0;d<b.length;++d){var e=b[d];if(e&&e.Math==Math)return e}throw Error("Cannot find global object");}var w=v(this);
+function y(b,d){if(d)a:{var e=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var k=b[h];if(!(k in e))break a;e=e[k]}b=b[b.length-1];h=e[b];d=d(h);d!=h&&d!=null&&u(e,b,{configurable:!0,writable:!0,value:d})}}function z(b){function d(h){return b.next(h)}function e(h){return b.throw(h)}return new Promise(function(h,k){function m(n){n.done?h(n.value):Promise.resolve(n.value).then(d,e).then(m,k)}m(b.next())})}y("globalThis",function(b){return b||w});/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+function A(b,d){function e(){}e.prototype=d.prototype;b.i=d.prototype;b.prototype=new e;b.prototype.constructor=b;b.g=function(h,k,m){for(var n=Array(arguments.length-2),p=2;p<arguments.length;p++)n[p-2]=arguments[p];return d.prototype[k].apply(h,n)}};function B(b,d,e="*"){function h(a){if(typeof a==="string")return F.encode(a).buffer;if(a instanceof ArrayBuffer)return a.slice(0);if(ArrayBuffer.isView(a))return a.buffer.slice(a.byteOffset,a.byteOffset+a.byteLength);throw Error("Invalid data type");}function k(a){a=h(a);var f={type:"send",data:new Uint8Array(a)},g;(g=r)==null||g.postMessage(f,[a])}function m(){if(!r)throw Error("Data port not captured yet.");r.onmessage=a=>{if(a.data.type==="message"){a=new MessageEvent("message",{data:G.decode(a.data.data)});
+let f;(f=c.onmessage)==null||f.call(c,a);c.dispatchEvent(a)}}}function n(){if(!t)throw Error("Control port not captured yet.");t.onmessage=a=>{switch(a.data.type){case "open":l=1;var f=new Event("open"),g;(g=c.onopen)==null||g.call(c,f);c.dispatchEvent(f);q.forEach(H=>{k(H)});q=[];break;case "close":g=a.data;l=3;g=new CloseEvent("close",{code:g.code,reason:g.reason,wasClean:g.wasClean});(f=c.onclose)==null||f.call(c,g);c.dispatchEvent(g);break;case "error":l=3;f=new Event("error");let x;(x=c.onerror)==
+null||x.call(c,f);c.dispatchEvent(f)}}}function p(a){return z(function*(){var f=new MessageChannel;t=f.port1;var g=new MessageChannel;r=g.port1;n();m();window.parent.postMessage({type:"websocket_open",portOrdering:["control","data"],url:b,protocols:a||[],connectionId:I},e,[f.port2,g.port2])}())}var c=Reflect.construct(EventTarget,[],new.target);c.CONNECTING=0;c.OPEN=1;c.CLOSING=2;c.CLOSED=3;c.url=b;c.binaryType="arraybuffer";c.protocol="";c.h="";var l=0,t=null,r=null,q=[],F=new TextEncoder,G=new TextDecoder;
+c.onopen=null;c.onmessage=null;c.onclose=null;c.onerror=null;Object.defineProperty(c,"readyState",{get:()=>l,enumerable:!0,configurable:!0});Object.defineProperty(c,"bufferedAmount",{get:()=>{var a=0;q.forEach(f=>{a+=typeof f==="string"?f.length:f.byteLength});return a},enumerable:!0,configurable:!0});var I=function(){var a;return((a=globalThis.crypto)==null?0:a.randomUUID)?globalThis.crypto.randomUUID():"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,f=>{var g=Math.random()*16|0;return(f===
+"x"?g:g&3|8).toString(16)})}();c.send=a=>{if(l===1)a instanceof Blob?a.arrayBuffer().then(f=>{k(f)}):k(a);else if(l===0)if(typeof a==="string")q.push(a);else if(a instanceof ArrayBuffer||ArrayBuffer.isView(a))q.push(h(a));else throw Error("Sending Blob is not supported before the connection is open.");else console.debug("WebSocket send called in CLOSING or CLOSED state; ignored.")};c.close=(a=1E3,f="")=>{if(l!==2&&l!==3){l=2;a={type:"close",code:a,reason:f,wasClean:a===1E3};var g;(g=t)==null||g.postMessage(a)}};
+Promise.resolve().then(()=>p(d));return c}A(B,EventTarget);var C=document.currentScript,D=C==null?void 0:C.getAttribute("ws-interception-config");if(!D)throw Error("WebSocket Interceptor: Missing ws-interception-config attribute in the script tag.");var E=JSON.parse(D);if(!E.parentOrigin||typeof E.parentOrigin!=="string")throw Error("WebSocket Interceptor: Invalid parentOrigin in ws-interception-config");
+(function(b){var d=Object.getOwnPropertyDescriptor(window,"WebSocket");if(!d||d.writable||d.configurable)d=Object.assign(function(e,h){try{let k=(new URL(e)).hostname;if(b.proxiedDomains.some(m=>k===m||k.endsWith(`.${m}`)))return new B(e,h,b.parentOrigin)}catch(k){throw window.parent.postMessage({type:"websocket_blocked",url:e,reason:"blocked_invalid_url"},b.parentOrigin),new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");}window.parent.postMessage({type:"websocket_blocked",
+url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");},{CONNECTING:0,OPEN:1,CLOSING:2,CLOSED:3}),Object.defineProperty(window,"WebSocket",{value:d,writable:!1,configurable:!1})})({proxiedDomains:E.proxiedDomains||[],parentOrigin:E.parentOrigin});}).call(this);
+</script><script>((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+  modelInformation.deprecatedGenerateImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-3.1-flash-image-preview","imageTransformModelName":"gemini-3-pro-image-preview-11-2025","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"],"deprecatedGenerateImageModelNames":["gemini-2.5-flash-image-preview","gemini-2.5-flash-image"]})</script><script>(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
+</script><script>(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northwest Vietnam Travel Guide - Premium STEM Portal</title>
+    <!-- Tailwind CSS cho thiết kế hiện đại, cao cấp -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Thư viện biểu tượng FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Phông chữ cao cấp từ Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.bottom-6{bottom:1.5rem}.left-6{left:1.5rem}.right-6{right:1.5rem}.top-0{top:0px}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-2{margin-bottom:0.5rem}.mb-6{margin-bottom:1.5rem}.ml-1{margin-left:0.25rem}.ml-2{margin-left:0.5rem}.ml-4{margin-left:1rem}.mt-1{margin-top:0.25rem}.mt-10{margin-top:2.5rem}.mt-16{margin-top:4rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-16{height:4rem}.h-32{height:8rem}.h-\[450px\]{height:450px}.h-full{height:100%}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-5xl{max-width:64rem}.max-w-xl{max-width:36rem}.flex-grow{flex-grow:1}.select-none{-webkit-user-select:none;user-select:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-1 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.25rem * var(--tw-space-x-reverse));margin-left:calc(0.25rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-6 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem * var(--tw-space-x-reverse));margin-left:calc(1.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-16 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(4rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(4rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-l-4{border-left-width:4px}.border-t{border-top-width:1px}.border-amber-200\/60{border-color:rgb(253 230 138 / 0.6)}.border-emerald-500\/30{border-color:rgb(16 185 129 / 0.3)}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-700{--tw-border-opacity:1;border-color:rgb(51 65 85 / var(--tw-border-opacity, 1))}.border-slate-700\/60{border-color:rgb(51 65 85 / 0.6)}.border-slate-700\/80{border-color:rgb(51 65 85 / 0.8)}.border-slate-800{--tw-border-opacity:1;border-color:rgb(30 41 59 / var(--tw-border-opacity, 1))}.border-teal-500{--tw-border-opacity:1;border-color:rgb(20 184 166 / var(--tw-border-opacity, 1))}.border-teal-500\/30{border-color:rgb(20 184 166 / 0.3)}.bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235 / var(--tw-bg-opacity, 1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-emerald-500\/20{background-color:rgb(16 185 129 / 0.2)}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-800\/80{background-color:rgb(30 41 59 / 0.8)}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-950{--tw-bg-opacity:1;background-color:rgb(2 6 23 / var(--tw-bg-opacity, 1))}.bg-teal-50{--tw-bg-opacity:1;background-color:rgb(240 253 250 / var(--tw-bg-opacity, 1))}.bg-teal-500{--tw-bg-opacity:1;background-color:rgb(20 184 166 / var(--tw-bg-opacity, 1))}.bg-teal-500\/20{background-color:rgb(20 184 166 / 0.2)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/95{background-color:rgb(255 255 255 / 0.95)}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top, var(--tw-gradient-stops))}.from-emerald-400{--tw-gradient-from:#34d399 var(--tw-gradient-from-position);--tw-gradient-to:rgb(52 211 153 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-slate-900\/90{--tw-gradient-from:rgb(15 23 42 / 0.9) var(--tw-gradient-from-position);--tw-gradient-to:rgb(15 23 42 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-slate-950{--tw-gradient-from:#020617 var(--tw-gradient-from-position);--tw-gradient-to:rgb(2 6 23 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-teal-900{--tw-gradient-from:#134e4a var(--tw-gradient-from-position);--tw-gradient-to:rgb(19 78 74 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-slate-900\/80{--tw-gradient-to:rgb(15 23 42 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), rgb(15 23 42 / 0.8) var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), transparent var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-slate-900{--tw-gradient-to:#0f172a var(--tw-gradient-to-position)}.to-teal-300{--tw-gradient-to:#5eead4 var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.object-cover{object-fit:cover}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-36{padding-top:9rem;padding-bottom:9rem}.pl-3{padding-left:0.75rem}.pl-4{padding-left:1rem}.pr-4{padding-right:1rem}.pt-4{padding-top:1rem}.pt-8{padding-top:2rem}.text-center{text-align:center}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.leading-tight{line-height:1.25}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14 / var(--tw-text-opacity, 1))}.text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15 / var(--tw-text-opacity, 1))}.text-emerald-300{--tw-text-opacity:1;color:rgb(110 231 183 / var(--tw-text-opacity, 1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.text-rose-500{--tw-text-opacity:1;color:rgb(244 63 94 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.text-teal-300{--tw-text-opacity:1;color:rgb(94 234 212 / var(--tw-text-opacity, 1))}.text-teal-400{--tw-text-opacity:1;color:rgb(45 212 191 / var(--tw-text-opacity, 1))}.text-teal-500{--tw-text-opacity:1;color:rgb(20 184 166 / var(--tw-text-opacity, 1))}.text-teal-600{--tw-text-opacity:1;color:rgb(13 148 136 / var(--tw-text-opacity, 1))}.text-teal-700{--tw-text-opacity:1;color:rgb(15 118 110 / var(--tw-text-opacity, 1))}.text-transparent{color:transparent}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-40{opacity:0.4}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-emerald-600\/10{--tw-shadow-color:rgb(5 150 105 / 0.1);--tw-shadow:var(--tw-shadow-colored)}.shadow-emerald-950\/20{--tw-shadow-color:rgb(2 44 34 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.outline-none{outline:2px solid transparent;outline-offset:2px}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.placeholder\:text-slate-400::placeholder{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.hover\:bg-emerald-700:hover{--tw-bg-opacity:1;background-color:rgb(4 120 87 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:bg-teal-100:hover{--tw-bg-opacity:1;background-color:rgb(204 251 241 / var(--tw-bg-opacity, 1))}.hover\:text-teal-600:hover{--tw-text-opacity:1;color:rgb(13 148 136 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:border-teal-400:focus{--tw-border-opacity:1;border-color:rgb(45 212 191 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 640px){.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 768px){.md\:col-span-2{grid-column:span 2 / span 2}.md\:inline-block{display:inline-block}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:justify-start{justify-content:flex-start}.md\:p-10{padding:2.5rem}.md\:text-left{text-align:left}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-6xl{font-size:3.75rem;line-height:1}.md\:text-lg{font-size:1.125rem;line-height:1.75rem}}@media (min-width: 1024px){.lg\:grid-cols-5{grid-template-columns:repeat(5, minmax(0, 1fr))}}</style></head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- HERO SECTION -->
+    <header class="relative bg-slate-950 text-white py-36 px-6 overflow-hidden">
+        <!-- ĐÃ ĐỔI LINK ONLINE MẶC ĐỊNH CHO CODEPEN/PREVIEW (Nếu chạy offline trên máy tính, bạn đổi src thành "pexels-sk4terbol-34049817.jpg") -->
+        <img src="https://images.unsplash.com/photo-1508873696983-2df519f0397e?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1508873696983-2df519f0397e?q=80&amp;w=1600&amp;auto=format&amp;fit=crop';" class="absolute inset-0 w-full h-full object-cover opacity-40 select-none pointer-events-none" alt="Northwest Vietnam Sunset">
+        
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/80 to-transparent"></div>
+        
+        <div class="relative max-w-5xl mx-auto text-center z-10">
+            <span class="bg-teal-500/20 text-teal-300 border border-teal-500/30 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase">Interactive STEM Travel Portal</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mt-6 tracking-tight leading-tight">
+                Discover the Majesty of <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">Northwest Vietnam</span>
+            </h1>
+            <p class="mt-4 text-slate-300 max-w-2xl mx-auto text-base md:text-lg">
+                An academic &amp; interactive geographic portal exploring the sustainable ecosystems, terraced landscapes, and culinary traditions of Northwest Vietnam.
+            </p>
+            
+            <!-- Thanh tìm kiếm thông minh -->
+            <div class="mt-8 max-w-xl mx-auto">
+                <div class="relative flex items-center bg-white rounded-full shadow-2xl shadow-emerald-950/20 overflow-hidden p-2 border border-slate-100">
+                    <i class="fa-solid fa-magnifying-glass text-slate-400 ml-4"></i>
+                    <input type="text" id="searchBar" onkeyup="searchFunction()" placeholder="Search destinations, foods or tips (Mu Cang Chai, Sapa...)" class="w-full pl-3 pr-4 py-3 text-slate-800 outline-none placeholder:text-slate-400 font-medium">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- THANH ĐIỀU HƯỚNG CỐ ĐỊNH (STICKY NAV) -->
+    <nav class="sticky top-0 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 z-50">
+        <div class="max-w-5xl mx-auto px-4 flex justify-between items-center h-16">
+            <span class="font-extrabold text-teal-600 tracking-tight flex items-center gap-2">
+                <i class="fa-solid fa-compass"></i> NW.EXPLORE
+            </span>
+            <div class="flex items-center space-x-1">
+                <a href="#mucangchai" class="hidden md:inline-block px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-teal-600 hover:bg-slate-50 transition">Mu Cang Chai</a>
+                <a href="#mocchau" class="hidden md:inline-block px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-teal-600 hover:bg-slate-50 transition">Moc Chau</a>
+                <a href="#sapa" class="hidden md:inline-block px-3 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-teal-600 hover:bg-slate-50 transition">Sapa</a>
+                <a href="#calculator" class="px-3 py-2 rounded-lg text-sm font-bold bg-teal-50 text-teal-700 hover:bg-teal-100 transition">Budget Calc</a>
+                <!-- NÚT TẢI FILE TRỰC TIẾP DÀNH CHO BẠN -->
+                <button onclick="downloadCode()" class="ml-2 px-3 py-2 rounded-lg text-sm font-bold bg-emerald-600 text-white hover:bg-emerald-700 active:scale-95 transition flex items-center gap-1.5 shadow-md shadow-emerald-600/10">
+                    <i class="fa-solid fa-download"></i> <span>Download File</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-4 py-12">
+
+        <!-- DANH SÁCH ĐỊA ĐIỂM -->
+        <div id="destinationsList" class="space-y-16">
+
+            <!-- 1. MU CANG CHAI -->
+            <section class="destination-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden transition hover:shadow-lg" id="mucangchai">
+                <div class="h-[450px] w-full relative">
+                    <!-- ĐỔI LINK ONLINE CHO CODEPEN (Nếu chạy offline trên máy tính, đổi src thành "pexels-sk4terbol-34049817.jpg") -->
+                    <img src="https://images.unsplash.com/photo-1508873696983-2df519f0397e?q=80&amp;w=1200" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1508873696983-2df519f0397e?q=80&amp;w=1200';" alt="Mu Cang Chai Golden Terraces" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 text-white">
+                        <span class="bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Yen Bai Province</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold mt-2">Mu Cang Chai — Stairway to the Golden Sky</h2>
+                    </div>
+                </div>
+
+                <div class="p-8">
+                    <!-- Thông tin chi tiết mở rộng -->
+                    <div class="text-slate-600 leading-relaxed text-base border-l-4 border-teal-500 pl-4 space-y-4">
+                        <p>
+                            Mu Cang Chai is an exceptionally rugged highland district situated at the foot of the magnificent Hoang Lien Son range, at an average altitude of 1,000 meters above sea level. This destination is globally celebrated for its steep, sweeping terraced rice fields. Carved over centuries by the ingenious indigenous Hmong communities, these terraces successfully turned vertical mountain wildernesses into highly productive agricultural zones.
+                        </p>
+                        <p>
+                            The landscape reflects a marvelous human effort to adapt to complex topography, making it one of the most significant eco-cultural heritage sites in Southeast Asia.
+                        </p>
+                        <div class="text-sm bg-slate-50 p-4 rounded-xl border border-slate-100 space-y-1">
+                            <span class="font-bold text-teal-700 block"><i class="fa-solid fa-flask"></i> STEM Scientific Dimension: Hydro-Topographical Adaption</span>
+                            <p class="italic text-slate-500">
+                                Terraced farming represents an advanced gravity-fed irrigation system. By constructing stepped horizontal levels on slopes up to 60 degrees, farmers slow water flow, increase soil moisture retention, filter nutrients down the gradient, and completely prevent massive soil erosion during severe monsoon downpours.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Lưới thông tin -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                            <h3 class="font-bold text-slate-900 flex items-center gap-2 text-base">
+                                <i class="fa-solid fa-calendar-days text-teal-600"></i> Best Time to Visit (Seasonal Cycles)
+                            </h3>
+                            <div class="mt-2 text-sm text-slate-600 space-y-2">
+                                <p><strong>May - June (Water-Pouring Season):</strong> Summer rains fill the parched earth. The terraces transform into hundreds of shimmering fluid mirrors reflecting clouds and blue skies.</p>
+                                <p><strong>September - October (Mùa Vàng / Golden Harvest):</strong> The absolute scenic climax of Northwest Vietnam. The valleys ripen in unison, painting the entire region in vivid, layered shades of golden-yellow.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                            <h3 class="font-bold text-slate-900 flex items-center gap-2 text-base">
+                                <i class="fa-solid fa-map-pin text-rose-500"></i> Where to Go (Geographical Landmarks)
+                            </h3>
+                            <div class="mt-2 text-sm text-slate-600 space-y-2">
+                                <p><strong>Raspberry Hill (La Pan Tan):</strong> A rare, perfectly circular terrace peak representing the ultimate achievement in ethnic land sculpting.</p>
+                                <p><strong>Horseshoe Hill (Sang Nhu):</strong> A dramatic horseshoe curve displaying complex concentric rice agricultural rings.</p>
+                                <p><strong>Khau Pha Pass:</strong> An elevation of 1,500m offering breathtaking panoramic views and ideal aerodynamic currents for paragliders.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 md:col-span-2">
+                            <h3 class="font-bold text-slate-900 flex items-center gap-2 text-base">
+                                <i class="fa-solid fa-bus text-amber-500"></i> Transport &amp; Route Engineering
+                            </h3>
+                            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                                Located 300km northwest of Hanoi. Travelers generally utilize comfortable overnight sleeper cabin buses departing from My Dinh Bus Station directly to Mu Cang Chai (approx. 7 hours of transit). Motorbiking is a highly visual, immersive alternative via National Highway 32, traversing the scenic Thanh Son tea hills and Nghia Lo fields, though extreme care must be taken on high-altitude mountain turns.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ẨM THỰC MÙ CĂNG CHẢI (CÓ HÌNH ẢNH MINH HỌA) -->
+                    <div class="mt-8 border-t border-slate-100 pt-8">
+                        <h3 class="font-bold text-slate-900 flex items-center gap-2 text-lg mb-6">
+                            <i class="fa-solid fa-utensils text-emerald-600"></i> Culinary Highlights — 5 Famous Local Dishes
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                            <!-- Món 1 -->
+                            <div class="bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex flex-col hover:shadow-md transition">
+                                <div class="h-32 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&amp;w=400&amp;auto=format&amp;fit=crop" onerror="this.onerror=null; this.src='https://placehold.co/400x300/e2e8f0/475569?text=Tu+Le+C_om';" alt="Tu Le Green Rice" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-3 flex-grow flex flex-col justify-between">
+                                    <h4 class="font-bold text-sm text-slate-900">Tu Le Green Rice (Cốm)</h4>
+                                    <p class="text-xs text-slate-600 mt-1">Young, sweet glutinous rice grains harvested at dawn and gently hand-roasted over slow wood fires.</p>
+                                </div>
+                            </div>
+                            <!-- Món 2 -->
+                            <div class="bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex flex-col hover:shadow-md transition">
+                                <div class="h-32 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?q=80&amp;w=400&amp;auto=format&amp;fit=crop" onerror="this.onerror=null; this.src='https://placehold.co/400x300/e2e8f0/475569?text=Sticky+Rice';" alt="Sticky Rice" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-3 flex-grow flex flex-col justify-between">
+                                    <h4 class="font-bold text-sm text-slate-900">Tu Le Sticky Rice</h4>
+                                    <p class="text-xs text-slate-600 mt-1">Infused with mountain spring water, this steamed sticky rice is dập dẻo and incredibly rich in starch.</p>
+                                </div>
+                            </div>
+                            <!-- Món 3 -->
+                            <div class="bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex flex-col hover:shadow-md transition">
+                                <div class="h-32 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&amp;w=400&amp;auto=format&amp;fit=crop" onerror="this.onerror=null; this.src='https://placehold.co/400x300/e2e8f0/475569?text=Salmon';" alt="Khau Pha Salmon" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-3 flex-grow flex flex-col justify-between">
+                                    <h4 class="font-bold text-sm text-slate-900">Khau Pha Salmon</h4>
+                                    <p class="text-xs text-slate-600 mt-1">Cold-water salmon farmed organically in mountain springs directly below the high slopes of Khau Pha.</p>
+                                </div>
+                            </div>
+                            <!-- Món 4 -->
+                            <div class="bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex flex-col hover:shadow-md transition">
+                                <div class="h-32 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&amp;w=400&amp;auto=format&amp;fit=crop" onerror="this.onerror=null; this.src='https://placehold.co/400x300/e2e8f0/475569?text=Pork';" alt="Grilled Pork" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-3 flex-grow flex flex-col justify-between">
+                                    <h4 class="font-bold text-sm text-slate-900">Grilled Forest Pork</h4>
+                                    <p class="text-xs text-slate-600 mt-1">Thin slices of free-range mountain pork marinated with wild spices and slow-cooked over glowing coals.</p>
+                                </div>
+                            </div>
+                            <!-- Món 5 -->
+                            <div class="bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex flex-col hover:shadow-md transition">
+                                <div class="h-32 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?q=80&amp;w=400&amp;auto=format&amp;fit=crop" onerror="this.onerror=null; this.src='https://placehold.co/400x300/e2e8f0/475569?text=Grasshoppers';" alt="Fried Grasshoppers" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-3 flex-grow flex flex-col justify-between">
+                                    <h4 class="font-bold text-sm text-slate-900">Fried Grasshoppers</h4>
+                                    <p class="text-xs text-slate-600 mt-1">A crispy, high-protein organic snack gathered from fields and fried with shredded lemon leaves.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Khối thông tin mẹo hữu ích -->
+                    <div class="mt-6 bg-amber-50 border border-amber-200/60 rounded-xl p-5 flex gap-4">
+                        <div class="text-amber-500 text-xl"><i class="fa-solid fa-circle-info"></i></div>
+                        <div>
+                            <h4 class="font-bold text-amber-900 text-sm">Local Travel Tips &amp; Sustainable Ethics</h4>
+                            <p class="text-xs text-amber-800 mt-1 leading-relaxed">
+                                Always stay on designated walking trails to prevent compressing the soil on terrace bunds, which damages the critical drainage structure. Keep rain gear accessible, as mountainous weather can change rapidly within minutes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 2. MOC CHAU -->
+            <section class="destination-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden transition hover:shadow-lg" id="mocchau">
+                <div class="h-[450px] w-full relative">
+                    <!-- ĐỔI LINK ONLINE CHO CODEPEN (Nếu chạy offline trên máy tính, đổi src thành "pexels-vietnamhiddenlight-29537380.jpg") -->
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&amp;w=1200" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&amp;w=1200';" alt="Moc Chau Flower Fields" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 text-white">
+                        <span class="bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Son La Province</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold mt-2">Moc Chau — The Emerald Sub-Alpine Plateau</h2>
+                    </div>
+                </div>
+
+                <div class="p-8">
+                    <!-- Thông tin chi tiết mở rộng -->
+                    <div class="text-slate-600 leading-relaxed text-base border-l-4 border-teal-500 pl-4 space-y-4">
+                        <p>
+                            Moc Chau is an expansive, highly scenic plateau sitting at an average altitude of 1,050 meters, acting as the economic and ecological jewel of Son La province. Blessed with thick, volcanic basaltic soils and a cool climate, Moc Chau is surrounded by immense green tea hills, wild flower valleys, and modern milk dairy farms. It is a highly productive agricultural heartland and a beautiful ecological sanctuary.
+                        </p>
+                        <p>
+                            The area is home to rich, diverse ethnic communities of Thai and H'Mông people, who maintain deep, harmonious relationships with the local highland terrain.
+                        </p>
+                        <div class="text-sm bg-slate-50 p-4 rounded-xl border border-slate-100 space-y-1">
+                            <span class="font-bold text-teal-700 block"><i class="fa-solid fa-flask"></i> STEM Ecological Dimension: Basaltic Agriculture</span>
+                            <p class="italic text-slate-500">
+                                The fertile basaltic soils of Moc Chau are the result of ancient volcanic activity. High organic matter, rich iron content, and exceptional moisture retention properties make it perfect for growing temperate tea varieties (such as Shan Tuyet, Oolong) and raising healthy high-yield dairy cows.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Lưới thông tin -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                            <h3 class="font-bold text-slate-900 flex items-center gap-2 text-base">
+                                <i class="fa-solid fa-calendar-days text-teal-600"></i> Best Time to Visit (Seasonal Cycles)
+                            </h3>
+                            <div class="mt-2 text-sm text-slate-600 space-y-2">
+                                <p><strong>November - December:</strong> Massive fields of white mustard (Cải trắng) and wild buckwheat bloom across entire valleys, painting the hills in pristine shades.</p>
+                                <p><strong>April - May:</strong> The peak harvesting season for juicy red mountain plums in the highly productive Na Ka Valley.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                            <h3 class="font-bold text-slate-900 flex items-center gap-2 text-base">
+                                <i class="fa-solid fa-map-pin text-rose-500"></i> Where to Go (Geographical Landmarks)
+                            </h3>
+                            <div class="mt-2 text-sm text-slate-600 space-y-2">
+                                <p><strong>Heart-shaped Tea Hills:</strong> A beautifully landscaped crop design showing the precise geometry of modern tea farming.</p>
+                                <p><strong>Na Ka Plum Valley:</strong> A high-yield agricultural ecosystem offering direct fruit harvesting experiences.</p>
+                                <p><strong>Bach Long Glass Bridge:</strong> A 632-meter long suspended cliffside bridge, utilizing high-tension safety glass, hanging over a pristine tropical canyon.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 md:col-span-2">
+                            <h3 class="font-bold text-slate-900 flex items-center gap-2 text-base">
+                                <i class="fa-solid fa-bus text-amber-500"></i> Transport &amp; Route Engineering
+                            </h3>
+                            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                                Located roughly 200km west of Hanoi, accessible via a smooth, modern expressway route. Travel time is around 4 hours via passenger limousine or overnight bus. It represents an ideal short scientific field trip or weekend escape due to the gentle roads and highly temperate plateau climate.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ẨM THỰC MỘC CHÂU (CÓ HÌNH ẢNH MINH HỌA) -->
+                    <div class="mt-8 border-t border-slate-100 pt-8">
+                        <h3 class="font-bold text-slate-900 flex items-center gap-2 text-lg mb-6">
+                            <i class="fa-solid fa-utensils text-emerald-600"></i> Culinary Highlights — 5 Famous Local Dishes
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                            <!-- Món 1 -->
+                            <div class="bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex flex-col hover:shadow-md transition">
+                                <div class="h-32 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&amp;w=400&amp;auto=format&amp;fit=crop" onerror="this.onerror=null; this.src='https://placehold.co/400x300/e2e8f0/475569?text=Fried+Veal';" alt="Be Chao" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-3 flex-grow flex flex-col justify-between">
+                                    <h4 class="font-bold text-sm text-slate-900">Be Chao (Fried Veal)</h4>
+                                    <p class="text-xs text-slate-600 mt-1">Tender mountain veal flash-fried in hot oil with raw lemongrass and fresh ginger, sealing in sweet juices.</p>
+                                </div>
+                            </div>
+                            <!-- Món 2 -->
+                            <div class="bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex flex-col hover:shadow-md transition">
+                                <div class="h-32 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&amp;w=400&amp;auto=format&amp;fit=crop" onerror="this.onerror=null; this.src='https://placehold.co/400x300/e2e8f0/475569?text=Grilled+Fish';" alt="Pa Pinh Top" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-3 flex-grow flex flex-col justify-between">
+                                    <h4 class="font-bold text-sm text-slate-900">Pa Pinh Top</h4>
+                                    <p class="text-xs text-slate-600 mt-1">Spiced stream fish, split open and stuffed with wild Mac Khen, folded flat, and grilled on bamboo frames.</p>
+                                </div>
+                            </div>
+                            <!-- Món 3 -->
+                            <div class="bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex flex-col hover:shadow-md transition">
+                                <div class="h-32 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&amp;w=400&amp;auto=format&amp;fit=crop" onerror="this.onerror=null; this.src='https://placehold.co/400x300/e2e8f0/475569?text=Fresh+Milk';" alt="Fresh Milk" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-3 flex-grow flex flex-col justify-between">
+                                    <h4 class="font-bold text-sm text-slate-900">Fresh Plateau Milk</h4>
+                                    <p class="text-xs text-slate-600 mt-1">Nutritious milk pasteurized fresh daily from local Dutch Holstein-Friesian dairy cow herds.</p>
+                                </div>
+                            </div>
+                            <!-- Món 4 -->
+                            <div class="bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex flex-col hover:shadow-md transition">
+                                <div class="h-32 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?q=80&amp;w=400&amp;auto=format&amp;fit=crop" onerror="this.onerror=null; this.src='https://placehold.co/400x300/e2e8f0/475569?text=Nam+Pia';" alt="Nam Pia" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-3 flex-grow flex flex-col justify-between">
+                                    <h4 class="font-bold text-sm text-slate-900">Nam Pia</h4>
+                                    <p class="text-xs text-slate-600 mt-1">A rare local soup prepared with mountain goat broth, organic herbs, and a complex bitter flavor profile.</p>
+                                </div>
+                            </div>
+                            <!-- Món 5 -->
+                            <div class="bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex flex-col hover:shadow-md transition">
+                                <div class="h-32 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&amp;w=400&amp;auto=format&amp;fit=crop" onerror="this.onerror=null; this.src='https://placehold.co/400x300/e2e8f0/475569?text=Yogurt';" alt="Yogurt" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-3 flex-grow flex flex-col justify-between">
+                                    <h4 class="font-bold text-sm text-slate-900">Sticky Rice Yogurt</h4>
+                                    <p class="text-xs text-slate-600 mt-1">Creamy local dairy yogurt poured over a sweet bed of cold, naturally fermented black sticky rice.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Khối thông tin mẹo hữu ích -->
+                    <div class="mt-6 bg-amber-50 border border-amber-200/60 rounded-xl p-5 flex gap-4">
+                        <div class="text-amber-500 text-xl"><i class="fa-solid fa-circle-info"></i></div>
+                        <div>
+                            <h4 class="font-bold text-amber-900 text-sm">Local Travel Tips &amp; Cultural Etiquette</h4>
+                            <p class="text-xs text-amber-800 mt-1 leading-relaxed">
+                                Always request permission from local farmers before entering plum gardens. Avoid plucking flowers or breaking branches as they directly impact seasonal agricultural yields for ethnic families.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 3. SAPA -->
+            <section class="destination-card bg-white rounded-2xl shadow-md border border-slate-100 overflow-hidden transition hover:shadow-lg" id="sapa">
+                <div class="h-[450px] w-full relative">
+                    <!-- ĐỔI LINK ONLINE CHO CODEPEN (Nếu chạy offline trên máy tính, đổi src thành "pexels-thanh-peter-1640832-15826849.jpg") -->
+                    <img src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&amp;w=1200" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1528127269322-539801943592?q=80&amp;w=1200';" alt="Sapa Mountain Stream" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 text-white">
+                        <span class="bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Lao Cai Province</span>
+                        <h2 class="text-3xl md:text-4xl font-extrabold mt-2">Sapa — Pristine Valleys in the Clouds</h2>
+                    </div>
+                </div>
+
+                <div class="p-8">
+                    <!-- Thông tin chi tiết mở rộng -->
+                    <div class="text-slate-600 leading-relaxed text-base border-l-4 border-teal-500 pl-4 space-y-4">
+                        <p>
+                            Sapa is an alpine mountainous valley town perched at elevations between 1,500 and 1,650 meters, nestled inside the towering Hoang Lien Son range. The area is home to Mount Fansipan (3,147.3m), widely known as the "Roof of Indochina". Sapa features a unique sub-temperate climate, high year-round humidity, and dramatic winter cold snaps that can generate rare frost and snow.
+                        </p>
+                        <p>
+                            Sapa remains a critical conservation area for unique alpine flora, holding historic, deep-rooted minority villages of Black H'Mông, Red Dao, and Giáy tribes.
+                        </p>
+                        <div class="text-sm bg-slate-50 p-4 rounded-xl border border-slate-100 space-y-1">
+                            <span class="font-bold text-teal-700 block"><i class="fa-solid fa-flask"></i> STEM Meteorological Dimension: Elevation-Induced Lapse Rates</span>
+                            <p class="italic text-slate-500">
+                                Sapa's sub-temperate climate is driven by geographical altitude. The atmospheric lapse rate causes ambient air temperature to decrease by roughly 6.5°C for every 1,000 meters of vertical gain. This micro-climate makes Sapa highly suitable for cultivating European temperate cold-weather crops and farming cold-water sturgeon.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Lưới thông tin -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                            <h3 class="font-bold text-slate-900 flex items-center gap-2 text-base">
+                                <i class="fa-solid fa-calendar-days text-teal-600"></i> Best Time to Visit (Seasonal Cycles)
+                            </h3>
+                            <div class="mt-2 text-sm text-slate-600 space-y-2">
+                                <p><strong>March - May:</strong> Pristine spring blossoms of peach, cherry, and pear trees blanket the high slopes.</p>
+                                <p><strong>September - November:</strong> Striking golden rice harvests cover the deep Muong Hoa valley floor.</p>
+                                <p><strong>December - January:</strong> The cold peak. A rare time to experience beautiful, crisp mountain hoarfrost or light winter snow.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                            <h3 class="font-bold text-slate-900 flex items-center gap-2 text-base">
+                                <i class="fa-solid fa-map-pin text-rose-500"></i> Where to Go (Geographical Landmarks)
+                            </h3>
+                            <div class="mt-2 text-sm text-slate-600 space-y-2">
+                                <p><strong>Mount Fansipan Peak:</strong> Experience high-altitude engineering via the record-breaking three-rope cable car system, or plan technical mountain treks.</p>
+                                <p><strong>Muong Hoa Valley:</strong> Home to an ancient stone path with mysterious carved patterns and beautiful terraced slopes.</p>
+                                <p><strong>O Quy Ho Pass:</strong> Vietnam's longest mountain pass, slicing through steep cliffs with striking cloud-sea formations.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 md:col-span-2">
+                            <h3 class="font-bold text-slate-900 flex items-center gap-2 text-base">
+                                <i class="fa-solid fa-bus text-amber-500"></i> Transport &amp; Route Planning
+                            </h3>
+                            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+                                Directly connected to Hanoi via the modern Noi Bai - Lao Cai Highway. Air-conditioned sleeper express cabins complete the trip in just 5.5 hours. Alternatively, the traditional overnight railway from Hanoi to Lao Cai station offers a scenic mountain train experience, followed by a local shuttle bus climbing Sapa's iconic mountain curves.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ẨM THỰC SA PA (CÓ HÌNH ẢNH MINH HỌA) -->
+                    <div class="mt-8 border-t border-slate-100 pt-8">
+                        <h3 class="font-bold text-slate-900 flex items-center gap-2 text-lg mb-6">
+                            <i class="fa-solid fa-utensils text-emerald-600"></i> Culinary Highlights — 5 Famous Local Dishes
+                        </h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                            <!-- Món 1 -->
+                            <div class="bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex flex-col hover:shadow-md transition">
+                                <div class="h-32 overflow-hidden">
+                                    <img src="https://placehold.co/400x300/e2e8f0/475569?text=Thang+Co" onerror="this.onerror=null; this.src='https://placehold.co/400x300/e2e8f0/475569?text=Thang+Co';" alt="Thang Co" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-3 flex-grow flex flex-col justify-between">
+                                    <h4 class="font-bold text-sm text-slate-900">Thang Co</h4>
+                                    <p class="text-xs text-slate-600 mt-1">A slow-simmered rich mountain soup cooked with horse meat and 12 native mountain seeds like cardamom.</p>
+                                </div>
+                            </div>
+                            <!-- Món 2 -->
+                            <div class="bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex flex-col hover:shadow-md transition">
+                                <div class="h-32 overflow-hidden">
+                                    <img src="https://placehold.co/400x300/e2e8f0/475569?text=Sturgeon+Hotpot" onerror="this.onerror=null; this.src='https://placehold.co/400x300/e2e8f0/475569?text=Sturgeon+Hotpot';" alt="Sturgeon Hotpot" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-3 flex-grow flex flex-col justify-between">
+                                    <h4 class="font-bold text-sm text-slate-900">Sturgeon Hotpot</h4>
+                                    <p class="text-xs text-slate-600 mt-1">Sweet, nutrient-dense local sturgeon sliced fresh and dipped in a boiling sour-spicy mountain vegetable broth.</p>
+                                </div>
+                            </div>
+                            <!-- Món 3 -->
+                            <div class="bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex flex-col hover:shadow-md transition">
+                                <div class="h-32 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?q=80&amp;w=400&amp;auto=format&amp;fit=crop" onerror="this.onerror=null; this.src='https://placehold.co/400x300/e2e8f0/475569?text=Roast+Pork';" alt="Roast Pork" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-3 flex-grow flex flex-col justify-between">
+                                    <h4 class="font-bold text-sm text-slate-900">"Cap Nach" Roast Pork</h4>
+                                    <p class="text-xs text-slate-600 mt-1">Local free-range piglets roasted whole on a spit until their skin turns intensely crispy, golden, and dry.</p>
+                                </div>
+                            </div>
+                            <!-- Món 4 -->
+                            <div class="bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex flex-col hover:shadow-md transition">
+                                <div class="h-32 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1602253057119-44d745d9b860?q=80&amp;w=400&amp;auto=format&amp;fit=crop" onerror="this.onerror=null; this.src='https://placehold.co/400x300/e2e8f0/475569?text=Black+Chicken';" alt="Black Chicken" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-3 flex-grow flex flex-col justify-between">
+                                    <h4 class="font-bold text-sm text-slate-900">Sapa Black Chicken</h4>
+                                    <p class="text-xs text-slate-600 mt-1">A rare breed of dark-meat chicken slow-cooked with Chinese medicinal herbs, valued for energy restoration.</p>
+                                </div>
+                            </div>
+                            <!-- Món 5 -->
+                            <div class="bg-slate-50 rounded-xl overflow-hidden border border-slate-100 flex flex-col hover:shadow-md transition">
+                                <div class="h-32 overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&amp;w=400&amp;auto=format&amp;fit=crop" onerror="this.onerror=null; this.src='https://placehold.co/400x300/e2e8f0/475569?text=Rock+Sprout';" alt="Rock Sprout" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-3 flex-grow flex flex-col justify-between">
+                                    <h4 class="font-bold text-sm text-slate-900">"Mam Da" Rock Sprout</h4>
+                                    <p class="text-xs text-slate-600 mt-1">A rare sweet, crunchy winter vegetable that grows high on stone peaks. Quickly boiled and dipped in sesame salt.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Khối thông tin mẹo hữu ích -->
+                    <div class="mt-6 bg-amber-50 border border-amber-200/60 rounded-xl p-5 flex gap-4">
+                        <div class="text-amber-500 text-xl"><i class="fa-solid fa-circle-info"></i></div>
+                        <div>
+                            <h4 class="font-bold text-amber-900 text-sm">Local Travel Tips &amp; Wardrobe Planning</h4>
+                            <p class="text-xs text-amber-800 mt-1 leading-relaxed">
+                                Because atmospheric humidity regularly sits above 85%, roads can become slick and misty. High-traction walking shoes and a thermal windproof jacket are absolute requirements for safe trail exploration.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- PHẦN TÍNH TOÁN CHI PHÍ DU LỊCH TỰ ĐỘNG (INTERACTIVE BUDGET CALCULATOR) -->
+        <section class="mt-16 bg-gradient-to-br from-teal-900 to-slate-900 text-white rounded-2xl shadow-xl p-8 md:p-10" id="calculator">
+            <div class="text-center md:text-left max-w-2xl">
+                <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-3.5 py-1 rounded-full text-xs font-semibold tracking-wider uppercase">Interactive STEM Utility</span>
+                <h2 class="text-3xl font-extrabold mt-4">Smart Travel Budget Estimator</h2>
+                <p class="mt-2 text-slate-300 text-sm leading-relaxed">
+                    Estimate costs dynamically for your field research or vacation based on real local rate formulas.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                <!-- Điều khiển đầu vào -->
+                <div class="md:col-span-2 space-y-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Select Destination</label>
+                        <select id="calcDestination" onchange="calculateBudget()" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-teal-400">
+                            <option value="mucangchai">Mu Cang Chai (Yen Bai) - Local Rustic</option>
+                            <option value="mocchau">Moc Chau (Son La) - Family Budget</option>
+                            <option value="sapa" selected="">Sapa (Lao Cai) - Premium Area</option>
+                        </select>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Duration (Days)</label>
+                            <input type="number" id="calcDays" min="1" max="14" value="3" onchange="calculateBudget()" onkeyup="calculateBudget()" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-teal-400">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Transport Option</label>
+                            <select id="calcTransport" onchange="calculateBudget()" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-teal-400">
+                                <option value="bus">Sleeper Bus (~200k VND/way)</option>
+                                <option value="limo">Luxury Limousine (~400k VND/way)</option>
+                                <option value="motor">Motorbike from Hanoi (~150k/day)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Accommodation Type</label>
+                            <select id="calcStay" onchange="calculateBudget()" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-teal-400">
+                                <option value="homestay">Cozy Local Homestay</option>
+                                <option value="hotel">Standard Hotel Room</option>
+                                <option value="resort">Premium Nature Resort</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Food &amp; Dining Package</label>
+                            <select id="calcFood" onchange="calculateBudget()" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-teal-400">
+                                <option value="budget">Local Street Food</option>
+                                <option value="standard" selected="">Standard Dining Mix</option>
+                                <option value="premium">Gourmet Local Specialties</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hiển thị kết quả tính toán -->
+                <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-6 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-teal-400">Calculated Budget Estimate</h4>
+                        <div class="mt-4">
+                            <span class="text-4xl font-extrabold text-white" id="totalEstimate">2.480.000</span>
+                            <span class="text-slate-400 ml-1 text-sm font-semibold">VND</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-2">Conversion: ~<span id="usdEstimate">97.6</span> USD</p>
+                    </div>
+
+                    <div class="border-t border-slate-700/80 pt-4 mt-6 space-y-2 text-xs text-slate-300">
+                        <div class="flex justify-between">
+                            <span>Transportation Cost:</span>
+                            <span class="font-bold text-white" id="outTransport">450.000 VND</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Accommodation Total:</span>
+                            <span class="font-bold text-white" id="outStay">725.000 VND</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Food &amp; Activities Total:</span>
+                            <span class="font-bold text-white" id="outFood">1.305.000 VND</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 border-t border-slate-800 text-slate-400 py-12 px-6">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <span class="font-extrabold text-white tracking-tight flex items-center justify-center md:justify-start gap-2 text-lg">
+                    <i class="fa-solid fa-compass text-teal-500"></i> Northwest Vietnam Guide
+                </span>
+                <p class="text-xs text-slate-500 mt-2">STEM Travel Project © 2026. Built with modern Tailwind CSS &amp; JavaScript.</p>
+            </div>
+            <div class="flex space-x-6 text-sm">
+                <a href="#mucangchai" class="hover:text-white transition">Mù Căng Chải</a>
+                <a href="#mocchau" class="hover:text-white transition">Mộc Châu</a>
+                <a href="#sapa" class="hover:text-white transition">Sapa</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script>
+        // 1. Thuật toán lọc tìm kiếm động (Search function)
+        function searchFunction() {
+            let input = document.getElementById('searchBar').value.toLowerCase();
+            let cards = document.getElementsByClassName('destination-card');
+            
+            for (let i = 0; i < cards.length; i++) {
+                let text = cards[i].innerText.toLowerCase();
+                if (text.includes(input)) {
+                    cards[i].style.display = "block";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+
+        // 2. Thuật toán tính toán chi phí tự động (STEM Math Component)
+        function calculateBudget() {
+            const days = parseInt(document.getElementById('calcDays').value) || 1;
+            const dest = document.getElementById('calcDestination').value;
+            const transport = document.getElementById('calcTransport').value;
+            const stay = document.getElementById('calcStay').value;
+            const food = document.getElementById('calcFood').value;
+
+            // Hệ số điều chỉnh dựa trên độ đắt đỏ của từng địa phương
+            let areaMultiplier = 1.0;
+            if (dest === 'sapa') areaMultiplier = 1.45; // Sapa có độ thương mại hóa cao hơn
+            if (dest === 'mocchau') areaMultiplier = 1.15; 
+            if (dest === 'mucangchai') areaMultiplier = 1.0;
+
+            // Tính toán chi phí di chuyển
+            let transportCost = 0;
+            if (transport === 'bus') transportCost = 450000; // Khứ hồi giường nằm
+            if (transport === 'limo') transportCost = 800000; // Khứ hồi Limousine
+            if (transport === 'motor') transportCost = 150000 * days; // Thuê xe tính theo ngày
+
+            // Tính toán phòng nghỉ (Số đêm nghỉ = Số ngày - 1)
+            let stayCostPerNight = 250000; // Giá homestay bình dân
+            if (stay === 'hotel') stayCostPerNight = 550000; // Khách sạn tiêu chuẩn
+            if (stay === 'resort') stayCostPerNight = 1800000; // Resort nghỉ dưỡng cao cấp
+            let totalStayCost = stayCostPerNight * (days - 1);
+            if (totalStayCost <= 0) totalStayCost = 0;
+
+            // Chi phí ăn uống & vé tham quan mỗi ngày
+            let foodCostPerDay = 180000;
+            if (food === 'standard') foodCostPerDay = 300000;
+            if (food === 'premium') foodCostPerDay = 550000;
+            let totalFoodCost = foodCostPerDay * days;
+
+            // Áp dụng hệ số vùng miền và cộng dồn tổng chi phí
+            let adjustedStay = Math.round(totalStayCost * areaMultiplier);
+            let adjustedFood = Math.round(totalFoodCost * areaMultiplier);
+            let grandTotal = transportCost + adjustedStay + adjustedFood;
+
+            // Cập nhật giao diện người dùng
+            document.getElementById('outTransport').innerText = transportCost.toLocaleString('vi-VN') + ' VND';
+            document.getElementById('outStay').innerText = adjustedStay.toLocaleString('vi-VN') + ' VND';
+            document.getElementById('outFood').innerText = adjustedFood.toLocaleString('vi-VN') + ' VND';
+            document.getElementById('totalEstimate').innerText = grandTotal.toLocaleString('vi-VN');
+
+            // Quy đổi sang tỷ giá USD
+            const usdConversionRate = 25400;
+            document.getElementById('usdEstimate').innerText = (grandTotal / usdConversionRate).toFixed(1);
+        }
+
+        // 3. Hàm tải file trực tiếp (Export/Download file)
+        function downloadCode() {
+            // Lấy toàn bộ nội dung HTML hiện tại trên trang
+            const htmlContent = document.documentElement.outerHTML;
+            // Tạo một đối tượng Blob đại diện cho file text/html
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            // Tạo link tải tạm thời
+            const tempLink = document.createElement('a');
+            tempLink.href = URL.createObjectURL(blob);
+            tempLink.download = 'index.html'; // Tên file tải về
+            document.body.appendChild(tempLink);
+            tempLink.click(); // Giả lập click chuột tự động tải
+            document.body.removeChild(tempLink); // Xóa link tạm
+        }
+
+        // Tự động kích hoạt thuật toán tính chi phí khi tải trang xong
+        window.onload = function() {
+            calculateBudget();
+        };
+    </script>
+
+
+</body></html>
